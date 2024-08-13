@@ -1,0 +1,34 @@
+[versions]
+# https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+kotlin = "1.9.24"
+spring-boot = "3.3.2"
+spring-dependency-management = "1.1.6"
+
+apache-poi = "5.3.0"
+
+maven-publish = "0.29.0"
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
+
+[libraries]
+# spring boot
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter" }
+
+# kotlin
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+
+# junit
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+
+apache-poi = { module = "org.apache.poi:poi", version.ref = "apache-poi" }
+apache-poi-ooxml = { module = "org.apache.poi:poi-ooxml", version.ref = "apache-poi" }
+
+[bundles]
+apache-poi = ["apache-poi", "apache-poi-ooxml"]
